@@ -1,42 +1,120 @@
-:root{
-    font-size: 62.5%; /* convierten 1rem=16px en 10px */
+:root {
+    font-size: 62.5%;
 }
-
-body{
+* {
+    outline: dotted 1px red;
+}
+body {
     font-family: Arial, Helvetica, sans-serif;
     color: #232323;
     font-size: 1.5rem;
+    overflow-x: hidden;
 }
-
-header{
+header {
     background-color: #232323;
     padding: 2rem;
     overflow: auto;
 }
-
-h1{
+h1 {
     font-size: 2.5rem;
     font-weight: 600;
-    color: #fff;
+    color: #FFF;
     float: left;
     background-image: url("../img/logo.png");
     background-repeat: no-repeat;
     background-size: contain;
     padding-left: 6rem;
 }
-
-nav{
+nav {
     float: right;
     margin-top: 0.5rem;
 }
-
-nav li{
+nav li {
     display: inline;
-    margin: 0 0.3rem;
+    margin: 0 1rem;
+}
+nav li a {
+    color: #FFF;
+    text-decoration: none;
 }
 
-nav li a{
-    color: #fff;
+#noticias-destacadas {
+    width: 300vw;
+    overflow: auto;
+    animation: 20s slider infinite;
+}
+figure {
+    float: left;
+    width: 100vw;
+}
+img {
+    display: block;
+    width: 100%;
+}
+figure figcaption {
+    background-color: #232323;
+}
+figure h2 {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 4rem;
+    padding: 2rem;
+    line-height: 100%;
+}
+
+.noticia {
+    /* utilidad de flexboth. ESENCIALES, dan utilidad*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; /* flex-start flex-end center space-between space-around space-evenly*/
+    align-items: center;
+
+    min-height: 15rem;
+
+}
+
+.noticias-img{
+    width: 30%;
+}
+
+.noticias-txt{
+    width: 65%;
+}
+.noticias-txt h3 {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 125%;
+}
+
+.noticia p:nth-last-of-type(1){
+    line-height: 200%;
+}
+
+#noticia p:nth-last-of-type(1) a {
     text-decoration: none;
+    color: black;
+}
+
+#tabla-resultados table th{
+    background-color: red;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+
+
+
+/*
+@keyframes slider {
+    0% { margin-left: 0 }
+    20% { margin-left: 0 }
+
+    40% { margin-left: -100vw }
+    60% { margin-left: -100vw }
+
+    80% { margin-left: -200vw }
+    100% { margin-left: -200vw }
 }
 

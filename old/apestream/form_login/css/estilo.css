@@ -3,9 +3,11 @@ body {
     background-size: cover;
     background-attachment: fixed;
     font-family: Roboto;
+    img
 }
 
 .contenedor-form{
+    /*background-image: url(../img/crown.png);*/
     position: relative;
     background: rgba(0,0,0,.7);
     width: 100%;
@@ -13,6 +15,10 @@ body {
     margin: 48px auto;
     color: #fff;
     border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: wheat;
+
 
   /*  padding: 40px; */
 }
@@ -26,8 +32,8 @@ body {
     font-size: 12px;
     line-height: 25px;
     text-align: center;
-    border-top: 2px solid #ff851b;
-    border-bottom: 2px solid #ff851b;
+    border-top: 2px solid #232323;
+    border-bottom: 2px solid #232323;
     transition: all .5s ease;
     cursor: pointer;
 }
@@ -37,8 +43,8 @@ body {
 }
 
 .contenedor-form .toggle:hover{
-    border-top: 2px solid #0075d9;
-    border-bottom: 2px solid #0075d9;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
 }
 
 .contenedor-form h2{
@@ -46,6 +52,7 @@ body {
     font-size: 20px;
     font-weight: 400;
     line-height: 1;
+    text-align: center;
 }
 
 .contenedor-form input[type="text"],
@@ -58,7 +65,7 @@ body {
     padding: 10px 15px;
     color: #fff;
     border-radius: 2px;
-    border-bottom: 4px solid #ff851b;
+    border-bottom: 4px solid #232323;
     font-family: roboto;
     font-size: 14px;
     font-weight: normal;
@@ -69,11 +76,11 @@ body {
 .contenedor-form input[type="text"]:focus,
 .contenedor-form input[type="password"]:focus,
 .contenedor-form input[type="email"]:focus {
-    border-bottom: 4px solid #0075d9;
+    border-bottom: 4px solid #fff;
 }
 
 .contenedor-form input[type="submit"] {
-    background: #ff851b;
+    background: brown;
     color: #fff;
     border: none;
     width: 100%;
@@ -87,11 +94,11 @@ body {
 }
 
 .contenedor-form input[type="submit"]:hover{
-    background: rgba(0,117,217,0.17);
+    background: rba(0,117,217,0.17);
 }
 
 .contenedor-form .resetpass {
-    background: rgba(200,117,217,17);
+    background-color: rgb(66, 29, 29);
     columns: #fff;
     width: 100%;
     padding: 15px 0;
