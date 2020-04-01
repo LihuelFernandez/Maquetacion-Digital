@@ -11,7 +11,7 @@ body {
     overflow-x: hidden;
 }
 header {
-    background-color: #232323;
+    background-color: #333333;
     padding: 2rem;
     overflow: auto;
 }
@@ -39,7 +39,7 @@ nav li a {
 }
 
 #noticias-destacadas {
-    width: 300vw;
+    /*width: calc(100vw * 3);*/
     overflow: auto;
     animation: 20s slider infinite;
 }
@@ -66,7 +66,7 @@ figure h2 {
     /* utilidad de flexboth. ESENCIALES, dan utilidad*/
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly; /* flex-start flex-end center space-between space-around space-evenly*/
+    justify-content: space-between; /* flex-start flex-end center space-between space-around space-evenly*/
     align-items: center;
 
     min-height: 15rem;
@@ -80,32 +80,67 @@ figure h2 {
 .noticias-txt{
     width: 65%;
 }
-.noticias-txt h3 {
-    font-weight: bold;
-    font-size: 2rem;
-    line-height: 125%;
+.noticia-txt h3 {
+	font-weight: 700;
+	font-size: 28px;
+}
+.noticia-txt a {
+	text-decoration: none;
+	color: #000;
+}
+.noticia-txt p {
+	font-size: 16px;
+}
+.noticia-txt h3,
+.noticia-txt p {
+	line-height: 1.5;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
-.noticia p:nth-last-of-type(1){
-    line-height: 200%;
+#tabla-posiciones td,
+#tabla-posiciones th {
+	padding: 12px;
+}
+#tabla-posiciones th {
+	background-color: #FF0000;
+	color: #FFFFFF;
+	font-size: 20px;
+	font-weight: 700;
+}
+#tabla-posiciones td {
+	background-color: #D9D9D9;
+	vertical-align: middle;
+}
+#tabla-posiciones tr {
+	border-bottom: solid 1px #999999;
+}
+#tabla-posiciones tr:first-child,
+#tabla-posiciones tr:last-child {
+	border: none;
+}
+#tabla-posiciones table {
+	width: 600px;
+	margin: auto;
+}
+#tabla-posiciones td:nth-of-type(odd) {
+	font-weight: 700;
+	font-size: 24px;
+	text-align: center;
+}
+#tabla-posiciones td:nth-of-type(even) span {
+	font-weight: 700;
+	color: #008899;
+}
+footer {
+	background-color: #333333;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 15px;
+	margin-top: 30px;
 }
 
-#noticia p:nth-last-of-type(1) a {
-    text-decoration: none;
-    color: black;
-}
-
-#tabla-resultados table th{
-    background-color: red;
-    color: #FFF;
-    font-weight: bold;
-    font-size: 1.6rem;
-    padding: 1rem;
-}
-
-
-
-
+/*Animaciones CSS */
 /*
 @keyframes slider {
     0% { margin-left: 0 }
@@ -117,4 +152,41 @@ figure h2 {
     80% { margin-left: -200vw }
     100% { margin-left: -200vw }
 }
+*/
+
+@media screen and (max-width: 600px){
+	/* Inicio @media-query */
+	.noticia {
+		flex-direction: column;
+	}
+	.noticia-img, .noticia-txt {
+		width: 100%;
+	}
+	nav {
+		display: none;
+		float: none;
+		clear: left;
+		padding-top: 1rem;
+	}
+	nav ul li {
+		display: block;
+		text-align: center;
+		line-height: 1.5;
+	}
+	button {
+		display: block;
+		float: right;
+		color: #FFF;
+		font-size: 1.25rem;
+		line-height: 1;
+		background-color: transparent;
+		border: none;
+		padding: 0.25rem;
+	}
+	button:focus + nav {
+		display: block;
+	}
+	/* Fin de @media-query */
+}
+
 
